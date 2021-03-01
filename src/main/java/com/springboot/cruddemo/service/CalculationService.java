@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CalculationService {
 
-     public Calculation Calculate(Calculation calc);
-     public Calculation getOneItem(int id);
+    public Calculation Calculate(Calculation calc);
+
+    public Calculation getOneItem(int id);
 }
