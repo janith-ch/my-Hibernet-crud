@@ -8,23 +8,24 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
+
 @RestController
 @RequestMapping("/")
 public class CalController {
 
     @Autowired
     private CalculationService calculationService;
+
     @PutMapping("/calc")
-    public Calculation Calc(@RequestBody Calculation calc){
+    public Calculation Calc(@RequestBody Calculation calc) {
         calc.setId(0);
 
         return calculationService.Calculate(calc);
     }
 
 
-
     @GetMapping("/one/{id}")
-    public Calculation getOneItem(@PathVariable int id){
+    public Calculation getOneItem(@PathVariable int id) {
         return calculationService.getOneItem(id);
     }
 
